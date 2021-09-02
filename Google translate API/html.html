@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+<button onclick="ttsFirst()" value="" type="submit">TTS!</button>
+<input type="text" name="textToTransLabel" id="textToTransLabel" value="auto" style="width: 20px;text-align: center;">
+
+<input type="text" name="translatedTextLabel" id="translatedTextLabel" value="en" style="width: 20px;text-align: center;">
+<button onclick="ttsSecond()" value="" type="submit">!TTS</button>
+<br>
+<textarea name="textToTrans" id="textToTrans"></textarea>
+<textarea name="translatedTextId" id="translatedTextId"></textarea>
+<br>
+<button onclick="translator ()" value="" type="submit" id="translateBtn">Translate!</button>
+
+
+<br>
+<p id="v-lang-audio-first"></p>
+<p id="v-lang-audio-second"></p>
+
+</body>
+</html>

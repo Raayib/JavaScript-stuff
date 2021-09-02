@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="add_trackars.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <title>Add Trackers</title>
+</head>
+<body>
+    <div class="container">
+  
+        <p class="h1 text-cmt-4 mb-4 text-center">Torrent Tools!</p>
+
+        <nav class="navbar">
+            <form class="form-inline m-auto">
+              <a class="btn btn-primary mr-3 btn-sm" type="button" href="add_trackars.html">Add Trackers to Magnet Link</a>
+              <a class="btn btn-outline-primary btn-sm" type="button" href="make_magnet.html">Make a Magnet Link</a>
+            </form>
+          </nav>
+
+
+
+
+
+                <div class="form-group">
+                    <label class="col-form-label" for="mag_link">Magnet Link</label>
+                    <small class="text-muted ml-1">add the magnet link you want to add trackers to</small>
+                    <input type="text" class="form-control" placeholder="magnet:?xt=urn:btih:..." id="mag_link" onclick="checkMag()" onkeyup="checkMag(), checkMagTrue()">
+        
+                    <label class="col-form-label mt-3" for="trak_list">trackers list "Each tracker in new line"</label>
+                    <small class="text-muted ml-1">no problems with empty lines</small>
+                    <button id="import_list" type="button" class="btn btn-secondary float-right btn-sm mt-3" onclick="import_list()" title="Grab a list from the internet">Import a list!</button>
+                    <textarea class="form-control mb-2" id="trak_list" rows="6" onclick="checkList()" onkeyup="checkList()" placeholder="udp://tracker.xxx.net:1337/announce
+http://tracker.xxx.org:1337/announce"></textarea>
+        
+                    <button id="maker" type="submit" class="btn btn-primary" onclick="add_trak()">Add Trackers!</button>
+                    <button id="maker" type="reset" class="btn btn-link" onclick="reset()">Reset</button>
+                    <button class="btn btn-outline-secondary float-right" role="button" aria-pressed="true" id="copy_mag" onclick="copy()" disabled>Copy</button>
+                    <button class="btn btn-outline-secondary mr-2 float-right" role="button" aria-pressed="true" id="mag" disabled>Open the magnet link</button>
+                    <textarea  class="form-control mb-3 mt-2" id="mag_full_link" rows="6" readonly></textarea>
+                </div>
+
+                    <!-- <button class="btn btn-light float-right mt-3" role="button" aria-pressed="true" id="edit_mag" onclick="edit()">Edit</button> -->
+                    <!-- <button class="btn btn-dark float-right mt-3" role="button" aria-pressed="true" id="done_mag" style="display: none;" onclick="doneEditing()">Done</button> -->
+                    <!-- <button id="back" type="button" class="btn btn-link mt-3" onclick="back(), doneEditing()">Back</button> -->
+
+  
+
+
+          
+    </div>
+</body>
+</html>
